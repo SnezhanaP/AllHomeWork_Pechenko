@@ -1,0 +1,133 @@
+html {
+  height: 100%;
+  min-width: 320px; }
+
+body {
+  display: grid;
+  margin: 0 15px 0 15px;
+  grid-template-columns: 1fr minmax(290px, 760px) 1fr;
+  grid-template-rows: 1fr; }
+  body form {
+    grid-row: 1 / 1;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex: 0 auto;
+    margin: 0; }
+    body form div:first-child h1 {
+      grid-column: 2 / 3;
+      justify-self: center; }
+    body form div {
+      display: grid;
+      grid-template-columns: minmax(80px, 120px) minmax(320px, 1fr);
+      grid-template-rows: 1fr; }
+      body form div input[type="date"]::-webkit-calendar-picker-indicator {
+        color: rgba(0, 0, 0, 0);
+        opacity: 1;
+        display: block;
+        margin-top: 4px;
+        margin-right: -8px;
+        background: url("calendar.svg") no-repeat;
+        width: 20px;
+        height: 20px;
+        border-width: thin; }
+      body form div input[type="date"]::-webkit-inner-spin-button {
+        opacity: 0; }
+      body form div .input::placeholder {
+        font-style: italic; }
+      body form div fieldset {
+        box-sizing: border-box;
+        grid-row: 1 / 1;
+        grid-column: 2 / 3; }
+  body fieldset {
+    margin: 0;
+    border: 1px solid #105cfe; }
+  body #adress {
+    height: 60px; }
+  body fieldset > div {
+    display: flex;
+    justify-content: flex-start; }
+  body div {
+    display: flex;
+    margin: 7px 0; }
+    body div .input {
+      box-sizing: border-box;
+      border: 1px solid #105cfe;
+      height: 20px;
+      padding: 0 0 0 4px; }
+    body div select:hover {
+      border: 2px solid #1348b3; }
+    body div input:hover {
+      border: 2px solid #1348b3; }
+    body div textarea:hover {
+      border: 2px solid #1348b3; }
+    body div fieldset:hover {
+      border: 2px solid #1348b3; }
+    body div input[required], body div textarea {
+      order: 1; }
+    body div input[required] ~ label:after {
+      content: "*";
+      color: #FF0000; }
+    body div textarea {
+      resize: vertical; }
+    body div textarea[required] ~ label:after {
+      content: "*";
+      color: #FF0000; }
+    body div .agree {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      grid-row: 1 / 1;
+      grid-column: 2 / 3; }
+      body div .agree input {
+        margin: 0 7px 0 0; }
+      body div .agree input[required] {
+        order: -1; }
+      body div .agree input[required] ~ label:after {
+        content: "*";
+        color: #FF0000; }
+      body div .agree a {
+        color: #105cfe; }
+    body div button {
+      grid-column: 2 / 3;
+      width: 200px;
+      background-color: #105cfe;
+      box-sizing: border-box;
+      border: none;
+      color: white; }
+
+@media (max-width: 571px) {
+  html {
+    height: 100%; }
+  body form {
+    display: flex;
+    flex-direction: column;
+    flex: 0 auto;
+    min-width: 320px; }
+    body form div:first-child h1 {
+      display: flex;
+      justify-content: center; }
+    body form div {
+      display: flex;
+      flex-direction: column;
+      flex: 0 auto; }
+    body form #div-agree {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+    body form input {
+      height: 25px;
+      margin-top: 3px;
+      margin-left: 0;
+      margin-right: 0; }
+    body form .input {
+      margin-left: 0;
+      height: 25px; }
+    body form label {
+      height: 25px; }
+    body form fieldset > div {
+      display: flex;
+      flex-direction: row; }
+      body form fieldset > div input {
+        margin: 0 3px 0 5px; } }

@@ -1,0 +1,208 @@
+html {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  display: grid;
+  margin: 0 15px 0 15px;
+  grid-template-columns: 1fr minmax(290px, 760px) 1fr;
+  grid-template-rows: 1fr;
+
+
+  form {
+    grid-row: 1 / 1;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex: 0 auto;
+    margin: 0;
+     div:first-child h1{
+       grid-column: 2 / 3;
+       justify-self: center;
+     }
+
+    div {
+      display: grid;
+      grid-template-columns: minmax(80px, 120px) minmax(320px, 1fr);
+      grid-template-rows: 1fr;
+
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        color: rgba(0, 0, 0, 0);
+        opacity: 1;
+        display: block;
+        margin-top: 4px;
+        margin-right: -8px;
+        background: url("calendar.svg") no-repeat;
+        width: 20px;
+        height: 20px;
+        border-width: thin;
+      }
+
+      input[type="date"]::-webkit-inner-spin-button {
+        opacity: 0
+      }
+
+      .input::placeholder {
+        font-style: italic;
+      }
+
+      fieldset {
+        box-sizing: border-box;
+        grid-row: 1 / 1;
+        grid-column: 2 / 3;
+      }
+    }
+  }
+
+  fieldset {
+    margin: 0;
+
+    border: 1px solid rgb(16, 92, 254);
+  }
+
+  #adress {
+    height: 60px;
+  }
+
+  fieldset > div {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+
+  div {
+    display: flex;
+    margin: 7px 0;
+
+    .input {
+      box-sizing: border-box;
+      border: 1px solid rgb(16, 92, 254);
+      height: 20px;
+      padding: 0 0 0 4px;
+    }
+
+    select:hover {
+      border: 2px solid rgb(19, 72, 179);
+    }
+
+    input:hover {
+      border: 2px solid rgb(19, 72, 179);
+    }
+
+    textarea:hover {
+      border: 2px solid rgb(19, 72, 179);
+    }
+
+    fieldset:hover {
+      border: 2px solid rgb(19, 72, 179);
+    }
+
+    input[required], textarea {
+      order: 1;
+    }
+
+    input[required] ~ label:after {
+      content: "*";
+      color: #FF0000;
+    }
+
+    textarea {
+      resize: vertical;
+
+    }
+
+    textarea[required] ~ label:after {
+      content: "*";
+      color: #FF0000;
+    }
+
+    .agree {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      grid-row: 1 / 1;
+      grid-column: 2 / 3;
+
+      input {
+        margin: 0 7px 0 0;
+      }
+
+      input[required] {
+        order: -1;
+      }
+
+
+      input[required] ~ label:after {
+        content: "*";
+        color: #FF0000;
+      }
+
+      a {
+        color: rgb(16, 92, 254);
+      }
+
+    }
+
+    button {
+      grid-column: 2 / 3;
+      width: 200px;
+      background-color: rgb(16, 92, 254);
+      box-sizing: border-box;
+      border: none;
+      color: white;
+
+    }
+  }
+}
+
+@media (max-width: 571px) {
+  html {
+    height: 100%;
+  }
+  body form {
+    display: flex;
+    flex-direction: column;
+    flex: 0 auto;
+    min-width: 320px;
+
+    div:first-child h1{
+      display: flex;
+      justify-content: center;
+          }
+    div {
+      display: flex;
+      flex-direction: column;
+      flex: 0 auto;
+    }
+    #div-agree {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+   }
+
+    input {
+      height: 25px;
+      margin-top: 3px;
+      margin-left: 0;
+      margin-right: 0;
+
+    }
+
+    .input {
+      margin-left: 0;
+      height: 25px;
+    }
+
+    label {
+      height: 25px;
+    }
+
+    fieldset > div {
+      display: flex;
+      flex-direction: row;
+      input {margin: 0 3px 0 5px}
+    }
+  }
+}

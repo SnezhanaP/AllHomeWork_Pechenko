@@ -1,0 +1,39 @@
+@keyframes color {
+    from{
+        background-color: #dedede;
+    }
+    25% {
+        background-color: #adaead;
+    }
+    50% {
+        background-color: #c4d3aa;
+    }
+    to {
+        background-color: grey;
+    }
+}
+
+@keyframes color-hover {
+    0% {
+        background-color: #FF0000;
+    }
+    12.5% {
+        background-color: orange;
+    }
+    25% {
+        background-color: yellow;
+    }
+
+    37.5% {
+        background-color: green;
+    }
+    50% {
+        background-color: #14edff;
+    }
+    62.5% {
+        background-color: blue;
+    }
+    100% {
+        background-color: purple;
+    }
+}

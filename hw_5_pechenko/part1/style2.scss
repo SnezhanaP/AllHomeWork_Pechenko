@@ -1,0 +1,57 @@
+html {
+ height: 100%;
+ min-width: 320px;
+}
+
+body {
+ form {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 40px calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14)calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14) calc((100% - 40px)/14);
+  grid-gap: 7px;
+
+  .h1 {
+   grid-row: 1 / 2;
+   grid-column: 2 / 3;
+  }
+  #first-name{
+   grid-row: 2 / 3;
+   grid-column: 2 / 3;
+  }
+  .first-name{
+   grid-row: 2 / 3;
+   grid-column: 1 / 2;
+  }
+  #last-name{
+   grid-row: 3 / 4;
+   grid-column: 2/ 3;
+  }
+  .last-name {
+   grid-row: 3 / 4;
+   grid-column: 1/ 2;
+  }
+  #surname{
+   grid-row: 4 / 5;
+   grid-column: 2/ 3;
+  }
+  .surname {
+   grid-row: 4 / 5;
+   grid-column: 1/ 2;
+  }
+
+ }}
+ input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+ }
+
+@media (max-width: 520px) {
+ body form{
+  grid-template-columns: minmax(320px, 1fr);
+  grid-template-rows: 40px 15px 15px 15px 15px 15px 15px 15px 15px 60px 15px 15px 15px 15px 15px 15px 15px;
+  }}}
